@@ -3,7 +3,7 @@
 /**
  * main - this displays the size of system
  *
- * Return: 0 on success
+ * Return: Always 0
  */
 
 int main(void)
