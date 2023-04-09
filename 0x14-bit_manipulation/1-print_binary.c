@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _power - to calculate the base and power
- * @base: exponet base
- * @pow: exponet power
- * Return: Base and power value
+ * _power - calculate the base and power
+ * @base: base 
+ * @pow: power 
+ * Return: value of base and power
  */
 unsigned long int _power(unsigned int base, unsigned int pow)
 {
@@ -11,14 +11,13 @@ unsigned long int _power(unsigned int base, unsigned int pow)
 	unsigned int i;
 
 	num = 1;
-	for (i = 1;i <= pow; i++)
+	for (i = 1; i <= pow; i++)
 		num *= base;
 	return (num);
 }
-
 /**
- * print_binary  - Prints the binary of a number
- * @n: number of printed
+ * print_binary - shows the binary of a number
+ * @n: shows the number of printend
  * Return: void
  */
 void print_binary(unsigned long int n)
@@ -29,12 +28,12 @@ void print_binary(unsigned long int n)
 	flag = 0;
 	dev = _power(2, sizeof(unsigned long int) * 8 - 1);
 
-	while (dev !=0)
+	while (dev != 0)
 	{
-		result =  n & dev;
+		result = n & dev;
 		if (result == dev)
 		{
-			flag =  1;
+			flag = 1;
 			_putchar('1');
 
 		}
